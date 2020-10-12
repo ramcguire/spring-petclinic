@@ -28,7 +28,7 @@
     <assertj.version>2.2.0</assertj.version>
 
     <!-- Dates -->
-    <jodatime-hibernate.version>1.4</jodatime-hibernate.version>
+    <jodatime-hibernate.version>1.7-SNAPSHOT</jodatime-hibernate.version>
     <jodatime-jsptags.version>1.1.1</jodatime-jsptags.version>
     <jadira-usertype-core.version>3.2.0.GA</jadira-usertype-core.version>
 
@@ -180,7 +180,7 @@
       <artifactId>joda-time</artifactId>
     </dependency>
     <dependency>
-      <groupId>joda-time</groupId>
+      <groupId>joda-time-ryan</groupId>
       <artifactId>joda-time-hibernate</artifactId>
       <version>${jodatime-hibernate.version}</version>
     </dependency>
@@ -252,7 +252,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
+      <groupId>junit-ryan</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
