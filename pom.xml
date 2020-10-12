@@ -254,6 +254,7 @@
     <dependency>
       <groupId>junit-ryan</groupId>
       <artifactId>junit</artifactId>
+      <version>4.14-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
