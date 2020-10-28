@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.springframework.samples</groupId>
+  <groupId>com.devops-bootcamp.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
   <version>1.0.0-SNAPSHOT</version>
 
@@ -180,7 +180,7 @@
       <artifactId>joda-time</artifactId>
     </dependency>
     <dependency>
-      <groupId>joda-time-ryan</groupId>
+      <groupId>com.devops-bootcamp.samples.joda-time-ryan</groupId>
       <artifactId>joda-time-hibernate</artifactId>
       <version>1.7-SNAPSHOT</version>
     </dependency>
@@ -252,7 +252,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>junit-ryan</groupId>
+      <groupId>com.devops-bootcamp.samples.junit-ryan</groupId>
       <artifactId>junit</artifactId>
       <version>4.14-SNAPSHOT</version>
       <scope>test</scope>
@@ -423,12 +423,12 @@
   <distributionManagement>
     <snapshotRepository>
       <id>snapshots</id>
-      <name>joda-time-hibernate Snapshots</name>
+      <name>pet-clinic Snapshots</name>
       <url>http://artifactory:8081/artifactory/libs-snapshot</url>
     </snapshotRepository>
     <repository>
       <id>central</id>
-      <name>joda-time-hibernate Realeases</name>
+      <name>pet-clinic Realeases</name>
       <url>http://artifactory:8081/artifactory/libs-release</url>
     </repository>
   </distributionManagement>
