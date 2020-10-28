@@ -423,12 +423,12 @@
   <distributionManagement>
     <snapshotRepository>
       <id>snapshots</id>
-      <name>JUnit Snapshots</name>
+      <name>joda-time-hibernate Snapshots</name>
       <url>http://artifactory:8081/artifactory/libs-snapshot</url>
     </snapshotRepository>
     <repository>
       <id>central</id>
-      <name>JUnit Realeases</name>
+      <name>joda-time-hibernate Realeases</name>
       <url>http://artifactory:8081/artifactory/libs-release</url>
     </repository>
   </distributionManagement>
