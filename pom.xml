@@ -182,7 +182,7 @@
     <dependency>
       <groupId>joda-time-ryan</groupId>
       <artifactId>joda-time-hibernate</artifactId>
-      <version>${jodatime-hibernate.version}</version>
+      <version>1.7-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>joda-time</groupId>
