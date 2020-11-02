@@ -24,7 +24,7 @@ pipeline {
 
         stage ('Deploy') {
             steps { 
-              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://localhost:8081/artifactory/libs-snapshot/spring-petclinic-pipeline/spring-petclinic-pipeline.war" -T ./petclinic-pipeline.war'
+              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://localhost:8081/artifactory/libs-snapshot/spring-petclinic-pipeline/spring-petclinic-pipeline.war" -T target/petclinic-pipeline.war'
             }
         }
     }
