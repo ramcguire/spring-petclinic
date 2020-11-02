@@ -4,6 +4,11 @@ pipeline {
       ARTIFACTORY_CREDS = credentials('Artifactory')
     }
     stages {
+        stage ('Get working directory') {
+          steps {
+            sh 'pwd'
+          }
+        }
         stage ('Compile') {
             steps {
                 sh 'mvn -s /usr/share/java/maven-3/conf/settings.xml compile'
@@ -24,7 +29,7 @@ pipeline {
 
         stage ('Deploy') {
             steps { 
-              pwd && sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://localhost:8081/artifactory/libs-snapshot/spring-petclinic-pipeline/spring-petclinic-pipeline.war" -T target/petclinic-pipeline.war'
+              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://localhost:8081/artifactory/libs-snapshot/spring-petclinic-pipeline/spring-petclinic-pipeline.war" -T target/petclinic-pipeline.war'
             }
         }
     }
