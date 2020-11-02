@@ -33,7 +33,7 @@ pipeline {
                       {
                         "pattern": "spring-petclinic*.pom",
                         "target": "libs-snapshot/spring-petclinic/"
-                      }
+                      },
                       {
                         "pattern": "spring-petclinic*.war",
                         "target": "libs-snapshot/spring-petclinic/"
