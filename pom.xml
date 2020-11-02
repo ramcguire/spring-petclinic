@@ -290,6 +290,7 @@
 
   <!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term -->
   <build>
+    <finalName>spring-petclinic-pipeline</finalName>
     <defaultGoal>install</defaultGoal>
     <testResources>
       <testResource>

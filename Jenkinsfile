@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+      ARTIFACTORY_CREDS = credentials('Artifactory')
+    }
     stages {
         stage ('Compile') {
             steps {
@@ -20,36 +23,8 @@ pipeline {
         }
 
         stage ('Deploy') {
-            steps {
-                rtServer (
-                    id: "ARTIFACTORY_SERVER",
-                    url: "http://artifactory:8082/artifactory",
-                    credentialsId: 'Artifactory'
-                )
-                rtUpload (
-                  serverId: "ARTIFACTORY_SERVER",
-                  spec: '''{
-                    "files": [
-                      {
-                        "pattern": "spring-petclinic*.pom",
-                        "target": "libs-snapshot/spring-petclinic/"
-                      },
-                      {
-                        "pattern": "spring-petclinic*.war",
-                        "target": "libs-snapshot/spring-petclinic/"
-                      }
-                    ]
-                  }''',
-                )
-
-            }
-        }
-
-        stage ('Publish build info') {
-            steps {
-                rtPublishBuildInfo (
-                    serverId: "ARTIFACTORY_SERVER"
-                )
+            steps { 
+              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://localhost:8081/artifactory/libs-snapshot/spring-petclinic-pipeline/spring-petclinic-pipeline.war" -T spring-petclinic-pipeline.war'
             }
         }
     }
