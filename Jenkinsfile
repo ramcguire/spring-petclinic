@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    tools {
+      maven 'Maven 3'
+      jdk 'jdk8'
+    }
     environment {
       ARTIFACTORY_CREDS = credentials('Artifactory')
     }
@@ -27,13 +31,13 @@ pipeline {
           }
         }
 
-        stage ('Deploy') {
-            when {
-              expression { env.BRANCH_NAME == "master" }
-            }
-            steps { 
-              sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://artifactory:8081/artifactory/libs-snapshot/pipelines/spring-petclinic.war" -T ./target/petclinic.war'
-            }
-        }
+        // stage ('Deploy') {
+        //     when {
+        //       expression { env.BRANCH_NAME == "master" }
+        //     }
+        //     steps { 
+        //       sh 'curl -u $ARTIFACTORY_CREDS -X PUT "http://artifactory:8081/artifactory/libs-snapshot/pipelines/spring-petclinic.war" -T ./target/petclinic.war'
+        //     }
+        // }
     }
 }
