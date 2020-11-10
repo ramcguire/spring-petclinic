@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools {
       maven 'Maven 3'
-      jdk 'jdk8'
     }
     // environment {
     //   ARTIFACTORY_CREDS = credentials('Artifactory')
