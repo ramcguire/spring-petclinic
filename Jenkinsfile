@@ -4,9 +4,9 @@ pipeline {
       maven 'Maven 3'
       jdk 'jdk8'
     }
-    environment {
-      ARTIFACTORY_CREDS = credentials('Artifactory')
-    }
+    // environment {
+    //   ARTIFACTORY_CREDS = credentials('Artifactory')
+    // }
     stages {
         stage ('Get working directory') {
           steps {
