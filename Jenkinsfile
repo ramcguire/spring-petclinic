@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    tools {
-      maven 'Maven 3'
-    }
+    // tools {
+    //   maven 'Maven 3'
+    // }
     // environment {
     //   ARTIFACTORY_CREDS = credentials('Artifactory')
     // }
