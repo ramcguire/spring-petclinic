@@ -14,19 +14,19 @@ pipeline {
         }
         stage ('Compile') {
             steps {
-                sh 'mvn -s /usr/share/java/maven-3/conf/settings.xml compile'
+                sh 'mvn compile'
             }
         }
 
         stage ('Test') {
           steps {
-              sh 'mvn -s /usr/share/java/maven-3/conf/settings.xml test'
+              sh 'mvn test'
           }
         }
 
         stage ('Package') {
           steps {
-              sh 'mvn -s /usr/share/java/maven-3/conf/settings.xml package'
+              sh 'mvn package'
           }
         }
 
