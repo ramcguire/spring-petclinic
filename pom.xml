@@ -252,7 +252,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>junit-ryan</groupId>
+      <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
