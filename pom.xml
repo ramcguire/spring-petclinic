@@ -421,14 +421,12 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>snapshots</id>
-      <name>pet-clinic Snapshots</name>
-      <url>http://artifactory:8081/artifactory/libs-snapshot</url>
+      <id>snapshots absolute path</id>
+      <url>file:///opt/tomcat/webapps</url>
     </snapshotRepository>
     <repository>
-      <id>central</id>
-      <name>pet-clinic Realeases</name>
-      <url>http://artifactory:8081/artifactory/libs-release</url>
+      <id>absolute path</id>
+      <url>file:///opt/tomcat/webapps</url>
     </repository>
   </distributionManagement>
 
