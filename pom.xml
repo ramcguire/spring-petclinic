@@ -330,7 +330,7 @@
         <version>2.3</version>
         <configuration>
           <warName>spring-petclinic</warName>
-          <outputDirectory>/opt/tomcat/webapps/</outputDirectory>
+          <outputDirectory>/home/centos/</outputDirectory>
         </configuration>
       </plugin>
       <plugin>
